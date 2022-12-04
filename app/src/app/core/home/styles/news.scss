@@ -1,0 +1,76 @@
+@import '../../../shared/variables';
+
+#news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    gap: 16px;
+
+    grid-template-areas:
+        "card-small-left card-wide"
+        "card-small-right card-wide";
+    
+    margin-bottom: 24px;
+}
+
+#news .card {
+    position: relative;
+}
+
+#news .card.first {
+    grid-area: card-small-left;
+    text-align: left;
+    background-color: #f8f6f5;
+}
+
+#news .card.second {
+    grid-area: card-small-right;
+    text-align: right;
+    background-color: #f3dcd2;
+}
+
+#news .card.third {
+    grid-area: card-wide;
+    text-align: right;
+    background-color: #dfdcd4;
+}
+
+#news .card .model {
+    height: 100%;
+}
+
+#news .content {
+    position: absolute;
+    text-align: left;
+}
+
+#news .content .heading {
+    font-size: 48px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    line-height: 62px;
+    text-transform: uppercase;
+}
+
+#news .content .description {
+    font-size: 22px;
+    font-family: $font-main;
+}
+
+#news .card.first .content {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+#news .card.second .content {
+    top: 50%;
+    left: 10%;
+
+    transform: translateY(-50%);
+}
+
+#news .card.third .content {
+    bottom: 25%;
+    left: 10%;
+}

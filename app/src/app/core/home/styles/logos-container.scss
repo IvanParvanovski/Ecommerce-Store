@@ -1,0 +1,39 @@
+@import '../../../shared/variables';
+
+// Logos Container 
+
+#logos-container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+
+    border: 2px solid $clr-divider;
+    margin-bottom: 24px;
+}
+
+#logos-container .heading {
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    background-color: white;
+
+    left: 50%;
+    top: -45px;
+
+    transform: translateX(-50%);
+
+    font-family: $font-secondary;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#logos-container img {
+    width: 13%;
+    height: 13%;
+    object-fit: cover;
+}
