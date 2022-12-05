@@ -1,0 +1,98 @@
+@import '../../shared/variables';
+
+.page-title {
+    text-align: left;
+
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 54px;
+    margin-left: 32px;
+}
+
+#registerForm {
+    padding: 3%;
+    border: 2px solid $clr-divider;
+    margin-bottom: 24px;
+}
+
+#registerForm .content {
+    width: 40%;
+    margin: 0 auto;
+}
+
+#registerForm .heading {
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+#registerForm .inputField {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    color: #4B4453;
+    margin-bottom: 24px;
+    font-family: $font-main;
+}
+
+#registerForm .inputField label {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+#registerForm .inputField input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+#registerForm .required {
+    margin-left: 4px;
+    color: red;
+}
+
+#registerForm .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 58px;
+}
+
+#submitBtn {
+    background-color: $clr-black;
+    color: $clr-white;
+    font-family: $font-secondary;
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+    padding: 16px 48px;
+    border: 3px solid $clr-black;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+    -webkit-transition: all 0.2s 0s ease-out;
+    -moz-transition: all 0.2s 0s ease-out;
+    -o-transition: all 0.2s 0s ease-out;
+    transition: all 0.2s 0s ease-out;
+
+    background-color: $clr-white;
+    color: $clr-black;
+    border: 3px solid $clr-black;
+    font-weight: bold;
+}
+
+
+#backBtn {
+    color: $clr-gray1;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    font-size: 20px;
+}
+
+#backBtn:hover {
+    cursor: pointer;
+    color: $clr-link;
+}
