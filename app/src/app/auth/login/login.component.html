@@ -1,23 +1,46 @@
 <h1 class="page-title">Sign In</h1>
 
-<form id="registerForm">
+<form #loginForm="ngForm" class="personalInfoForm" (ngSubmit)="handleLogin(loginForm)">
     <div class="content">
         <h2 class="heading">Personal Information</h2>
-    
+
         <div class="inputField">
             <label for="email" name="email">Email <span class="required">*</span></label>
-            <input id="email" type="email">
+            <input ngModel #emailInput="ngModel" email required name="email" id="email" type="email">
+
+            <ng-container *ngIf="emailInput.touched">
+                <ul class="errorList">
+                    <li *ngIf="emailInput?.errors?.['required']">
+                        <p class="errorMsg">This field is required!</p>
+                    </li>
+                    <li *ngIf="emailInput?.errors?.['email']">
+                        <p class="errorMsg">Invalid email!</p>
+                    </li>
+                </ul>
+            </ng-container>
         </div>
 
         <div class="inputField">
             <label for="password" name="password">Password <span class="required">*</span></label>
-            <input id="password" type="password">
+            <input ngModel #passwordInput="ngModel" required minlength="5" name="password" id="password"
+                type="password">
+
+            <ng-container *ngIf="passwordInput.touched">
+                <ul class="errorList">
+                    <li *ngIf="passwordInput?.errors?.['required']">
+                        <p class="errorMsg">This field is required!</p>
+                    </li>
+                </ul>
+            </ng-container>
+
+            <!-- {{passwordInput?.errors | json}} -->
         </div>
 
         <div class="controls">
             <button id="submitBtn" type="submit">Sign In</button>
-            <button id="backBtn">Back</button>
+            <button id="backBtn" type="button">Back</button>
         </div>
     </div>
-
 </form>
+
+<!-- {{ loginForm.value | json }} -->

@@ -9,24 +9,24 @@
     margin-left: 32px;
 }
 
-#registerForm {
+.personalInfoForm {
     padding: 3%;
     border: 2px solid $clr-divider;
     margin-bottom: 24px;
 }
 
-#registerForm .content {
+.personalInfoForm .content {
     width: 40%;
     margin: 0 auto;
 }
 
-#registerForm .heading {
+.personalInfoForm .heading {
     font-family: $font-secondary;
     font-weight: 400;
     font-size: 32px;
 }
 
-#registerForm .inputField {
+.personalInfoForm .inputField {
     display: flex;
     flex-wrap: wrap;
     font-size: 22px;
@@ -35,24 +35,26 @@
     font-family: $font-main;
 }
 
-#registerForm .inputField label {
+.personalInfoForm .inputField label {
     width: 100%;
     margin-bottom: 4px;
 }
 
-#registerForm .inputField input {
+.personalInfoForm .inputField input {
     width: 80%;
     padding: 8px;
     border: 1px solid black;
     font-size: 16px;
+
+    margin-bottom: 8px;
 }
 
-#registerForm .required {
+.personalInfoForm .required {
     margin-left: 4px;
     color: red;
 }
 
-#registerForm .controls {
+.personalInfoForm .controls {
     display: flex;
     justify-content: space-between;
     margin-top: 58px;
@@ -95,4 +97,19 @@
 #backBtn:hover {
     cursor: pointer;
     color: $clr-link;
+}
+
+.errorList .errorMsg {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+
+    color: red;
+    font-size: 16px;
+}
+
+.errorList {
+    margin: 0;
+    width: 100%;
 }

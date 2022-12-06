@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
     './login.component.scss'
   ]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
 
   constructor() { }
 
-  ngOnInit(): void {
+  handleLogin(form: NgForm): void {
+    if (form.invalid) { return; }
+
+  
   }
 
 }
