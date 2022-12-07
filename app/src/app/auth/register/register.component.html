@@ -7,7 +7,7 @@
         <div class="inputField">
             <label for="firstName" name="firstName">First Name <span class="required">*</span></label>
             <input id="firstName" type="text" formControlName="firstName">
-            
+
             <ng-container *ngIf="registerForm.get('firstName')?.touched">
                 <ul class="errorList">
                     <li *ngIf="registerForm.get('firstName')?.errors?.['required']">
@@ -20,7 +20,7 @@
         <div class="inputField">
             <label for="lastName" name="lastName">Last Name <span class="required">*</span></label>
             <input id="lastName" type="text" formControlName="lastName">
-        
+
             <ng-container *ngIf="registerForm.get('lastName')?.touched">
                 <ul class="errorList">
                     <li *ngIf="registerForm.get('lastName')?.errors?.['required']">
@@ -33,7 +33,7 @@
         <div class="inputField">
             <label for="email" name="email">Email <span class="required">*</span></label>
             <input id="email" type="email" formControlName="email">
-        
+
             <ng-container *ngIf="registerForm.get('email')?.touched">
                 <ul class="errorList">
                     <li *ngIf="registerForm.get('email')?.errors?.['required']">
@@ -46,34 +46,42 @@
             </ng-container>
         </div>
 
-        <div class="inputField">
-            <label for="password" name="password">Password <span class="required">*</span></label>
-            <input id="password" type="password" formControlName="password">
-        
-            <ng-container *ngIf="registerForm.get('password')?.touched">
-                <ul class="errorList">
-                    <li *ngIf="registerForm.get('password')?.errors?.['required']">
-                        <p class="errorMsg">This field is required!</p>
-                    </li>
-                    <li *ngIf="registerForm.get('password')?.errors?.['minlength']">
-                        <p class="errorMsg">The min length is 7 characters!</p>
-                    </li>
-                </ul>
-            </ng-container>
-        </div>
+        <ng-container formGroupName="pass">
+            <div class="inputField">
+                <label for="password" name="password">Password <span class="required">*</span></label>
+                <input id="password" type="password" formControlName="password">
 
-        <div class="inputField">
-            <label for="rePassword" name="rePassword">Repeat Password <span class="required">*</span></label>
-            <input id="rePassword" type="password" formControlName="rePassword">
-        
-            <ng-container *ngIf="registerForm.get('rePassword')?.touched">
-                <ul class="errorList">
-                    <li *ngIf="registerForm.get('rePassword')?.errors?.['required']">
-                        <p class="errorMsg">This field is required!</p>
-                    </li>
-                </ul>
-            </ng-container>
-        </div>
+                <ng-container *ngIf="registerForm.get('pass')?.get('password')?.touched">
+                    <ul class="errorList">
+                        <li *ngIf="registerForm.get('pass')?.get('password')?.errors?.['required']">
+                            <p class="errorMsg">This field is required!</p>
+                        </li>
+                        <li *ngIf="registerForm.get('pass')?.get('password')?.errors?.['minlength']">
+                            <p class="errorMsg">The min length is 7 characters!</p>
+                        </li>
+                    </ul>
+                </ng-container>
+            </div>
+
+            <div class="inputField">
+                <label for="rePassword" name="rePassword">Repeat Password <span class="required">*</span></label>
+                <input id="rePassword" type="password" formControlName="rePassword">
+
+                <ng-container *ngIf="registerForm.get('pass')?.get('rePassword')?.touched">
+                    <ul class="errorList">
+                        <li *ngIf="registerForm.get('pass')?.get('rePassword')?.errors?.['required']">
+                            <p class="errorMsg">This field is required!</p>
+                        </li>
+                        <li *ngIf="registerForm.get('pass')?.errors?.['matchingPasswords']">
+                            <p class="errorMsg">The passwords do not match!</p>
+                        </li>
+                    </ul>
+                </ng-container>
+
+            </div>
+        </ng-container>
+
+        <!-- {{ registerForm.get('pass')?.errors?. | json }} -->
 
         <div class="controls">
             <button id="submitBtn" type="submit">Create an account</button>

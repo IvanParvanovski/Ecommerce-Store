@@ -5,8 +5,8 @@
         <h2 class="heading">Personal Information</h2>
 
         <div class="inputField">
-            <label for="email" name="email">Email <span class="required">*</span></label>
-            <input ngModel #emailInput="ngModel" email required name="email" id="email" type="email">
+            <label for="username" name="username">Email <span class="required">*</span></label>
+            <input ngModel #emailInput="ngModel" email required name="email" id="email" type="text">
 
             <ng-container *ngIf="emailInput.touched">
                 <ul class="errorList">

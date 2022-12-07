@@ -7,9 +7,6 @@ import { IUser } from '../shared/interfaces/user';
 })
 export class AuthService {
 
-  private _registerUrl = 'http://localhost:3000/api/register';
-  private _loginUrl = 'http://localhost:3000/api/register';
-
   user: IUser | null =  null;
 
   get isLogged() {
@@ -20,11 +17,16 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  registerUser(firstName: string, lastName: string, email:string, password: string, rePassword: string) {
-    return this.http.post<any>(this._registerUrl, {firstName, lastName, email, password, rePassword});
+  registerUser(username: string, email:string, password: string, rePassword: string) {
+    const tel = '';
+    return this.http.post<any>('/api/register', { username, email, password, rePassword, tel});
   }
 
   loginUser(email: string, password: string) {
-    return this.http.post<any>(this._loginUrl, {email, password});
+    return this.http.post<any>('/api/login', { email, password });
+  }
+
+  getProfile() {
+    return this.http.get<IUser>('api/users/profile');
   }
 }
