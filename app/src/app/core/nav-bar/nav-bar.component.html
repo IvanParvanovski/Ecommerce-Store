@@ -1,0 +1,72 @@
+<div id="navbar">
+    <a routerLink="/">
+        <img class="logo-img" src="assets/logo.png" alt="No Logo">
+    </a>
+
+    <div class="container">
+        <ul id="page-list">
+            <li class="page-list__item">
+                <a routerLink="/" class="page-list__item__link" appHighlightLinkDirective>Home</a>
+            </li>
+            <li class="page-list__item">
+                <a href="#" class="page-list__item__link" appHighlightLinkDirective>Shop</a>
+            </li>
+            <li class="page-list__item">
+                <a href="#" class="page-list__item__link">Blog</a>
+            </li>
+            <li class="page-list__item">
+                <a href="#" class="page-list__item__link">Sale</a>
+            </li>
+            <li class="page-list__item">
+                <a href="#" class="page-list__item__link">Contact us</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul id="user-options">
+            <ng-container *ngIf="isLoggedIn">
+                <li class="user-options__item">
+                    <a routerLink="#" class="user-options__item__link">{{user?.username}}</a>
+                </li>
+                <li class="user-options__item">
+                    <a routerLink="#" class="user-options__item__link">Log Out</a>
+                </li>
+
+                <li class="user-options__item">
+                    <i routerLink="#" class="fa-solid fa-heart"></i>
+                </li>
+                <li class="user-options__item">
+                    <a routerLink="#" id="bag">
+                        <i class="icon fa-solid fa-bag-shopping"></i>
+                        <div>
+                            <p class="bag__text">Shopping Cart</p>
+                            <p class="bag__total">0,00 EUR</p>
+                        </div>
+                    </a>
+                </li>
+            </ng-container>
+
+            <ng-container *ngIf="!isLoggedIn">
+                <li class="user-options__item">
+                    <a routerLink="/login" class="user-options__item__link">Sign In</a>
+                </li>
+                <li class="user-options__item">
+                    <a routerLink="/register" class="user-options__item__link">Create An Account</a>
+                </li>
+                <li class="user-options__item">
+                    <i routerLink="/login" class="fa-solid fa-heart"></i>
+                </li>
+                <li class="user-options__item">
+                    <a routerLink="/login" id="bag">
+                        <i class="icon fa-solid fa-bag-shopping"></i>
+                        <div>
+                            <p class="bag__text">Shopping Cart</p>
+                            <p class="bag__total">0,00 EUR</p>
+                        </div>
+                    </a>
+                </li>
+            </ng-container>   
+        </ul>
+    </div>
+</div>

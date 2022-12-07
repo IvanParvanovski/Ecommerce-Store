@@ -1,0 +1,77 @@
+@import '../../shared/variables';
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+
+    background-color: $clr-black;
+    color: $clr-white;
+}
+
+#navbar i {
+    font-size: 22px;
+}
+
+#page-list,
+#user-options {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.page-list__item__link,
+.user-options__item__link {
+    text-decoration: none;
+    color: white;
+}
+
+.page-list__item,
+.user-options__item {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.page-list__item__link,
+.user-options__item__link {
+    padding: 5px;
+}
+
+.page-list__item__link.active,
+.user-options__item__link.active {
+    border-bottom: 3px solid $clr-main2;
+}
+
+#bag {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $clr-white;
+}
+
+#bag .bag__text,
+#bag .bag__total {
+    margin: 0;
+}
+
+#bag .icon {
+    margin-right: 8px;
+}
+
+.bag__text {
+    font-family: $font-main;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.bag__total {
+    font-family: $font-main;
+    font-weight: 700;
+    // line-height: 30px;
+}

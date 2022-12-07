@@ -3,10 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { appInterceptorProvider } from './app.interceptor';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
-import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +14,12 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
     CoreModule,
     AuthModule,
   ],
-  providers: [],
+  providers: [
+    appInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
