@@ -26,7 +26,11 @@ export class AuthService {
     return this.http.post<any>('/api/login', { email, password });
   }
 
+  logout() {
+    return this.http.post<void>('/api/logout', {});
+  }
+
   getProfile() {
-    return this.http.get<IUser>('api/users/profile');
+    return this.http.get<IUser>('/api/users/profile');
   }
 }
