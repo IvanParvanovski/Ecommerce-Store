@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,6 +7,7 @@ import { AppComponent } from './app.component';
 import { appInterceptorProvider } from './app.interceptor';
 import { AuthModule } from './auth/auth.module';
 import { CatalogueRoutingModule } from './catalogue/catalogue-routing.module';
+import { CatalogueModule } from './catalogue/catalogue.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
@@ -18,6 +20,7 @@ import { CoreModule } from './core/core.module';
     CatalogueRoutingModule,
     CoreModule,
     AuthModule,
+    CatalogueModule
   ],
   providers: [
     appInterceptorProvider

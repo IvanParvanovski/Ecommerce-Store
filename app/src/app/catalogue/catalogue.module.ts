@@ -4,10 +4,9 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { CatalogueRoutingModule } from './catalogue-routing.module';
 
 
-
 @NgModule({
   declarations: [
-    CatalogueComponent
+    CatalogueComponent,
   ],
   imports: [
     CommonModule,

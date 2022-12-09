@@ -5,7 +5,8 @@ const routes: Routes = [
     {
         path: 'catalogue',
         component: CatalogueComponent
-    }
+    },
+    
 ]
 
 export const CatalogueRoutingModule = RouterModule.forChild(routes);

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IProduct } from 'src/app/shared/interfaces/product';
+import { CatalogueService } from '../catalogue.service';
 
 @Component({
   selector: 'app-catalogue',
@@ -9,11 +11,12 @@ import { Component, OnInit } from '@angular/core';
     './catalogue.component.scss'
   ]
 })
-export class CatalogueComponent implements OnInit {
+export class CatalogueComponent {
+  products: IProduct[] | null = null;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private catalogueService: CatalogueService
+  ) {
+    this.products = catalogueService.catalogueProducts;
   }
-
 }

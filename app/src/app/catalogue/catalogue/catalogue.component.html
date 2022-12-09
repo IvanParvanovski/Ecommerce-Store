@@ -15,17 +15,17 @@
 </section>
 
 <section class="clothes">
-    <div class="card">
-        <img class="dress-img" src="/assets/images/clothes/dress1.png" alt="No Image">
+    <div *ngFor="let product of products" class="card">
+        <img class="dress-img" src="{{product.img}}" alt="No Image">
         
-        <h6 class="card__heading">Top Women</h6>
-        <p class="card__description">Angels malu zip jeans slim black used</p>
+        <h6 class="card__heading">{{product.title}}</h6>
+        <p class="card__description">{{product.description}}</p>
         
-        <span class="card__price">139,00 EUR</span>
+        <span class="card__price">{{product.price}} EUR</span>
         <button class="buyButton">Buy</button>
     </div>
 
-    <div class="card">
+    <!-- <div class="card">
         <img class="dress-img" src="/assets/images/clothes/dress2.png" alt="No Image">
         
         <h6 class="card__heading">Top Women</h6>
@@ -35,15 +35,7 @@
         <button class="buyButton">Buy</button>
     </div>
 
-    <div class="card">
-        <img class="dress-img" src="/assets/images/clothes/dress3.png" alt="No Image">
-        
-        <h6 class="card__heading">Top Women</h6>
-        <p class="card__description">Angels malu zip jeans slim black used</p>
-        
-        <span class="card__price">139,00 EUR</span>
-        <button class="buyButton">Buy</button>
-    </div>
+    
 
     <div class="card">
         <img class="dress-img" src="/assets/images/clothes/dress4.png" alt="No Image">
@@ -163,5 +155,5 @@
         
         <span class="card__price">139,00 EUR</span>
         <button class="buyButton">Buy</button>
-    </div>
+    </div> -->
 </section>
