@@ -1,0 +1,26 @@
+@import '../../shared/variables';
+
+.buyButton {
+    position: absolute;
+    
+    bottom: 0;
+    right: 24px;
+
+    background-color: black;
+    color: $clr-white;
+    border: 2px solid $clr-black;
+
+    font-family: $font-secondary;
+    text-transform: uppercase;
+
+    padding: 4px 24px;
+    font-size: 16px;
+    letter-spacing: 2%;
+}
+
+.buyButton:hover {
+    cursor: pointer;
+    color: $clr-white;
+    background-color: $clr-main2;
+    border: 2px solid $clr-black;
+}

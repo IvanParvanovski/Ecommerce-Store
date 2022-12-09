@@ -1,4 +1,5 @@
 @import '../../../shared/variables';
+@import '../../../shared/product-card-style';
 
 #new-clothes {
     display: flex;
@@ -33,45 +34,6 @@
 #new-clothes .options label {
     font-family: $font-main;
     text-transform: uppercase;
-}
-
-#new-clothes .clothes {
-    display: flex;
-    gap: 24px;
-
-    width: 100%;
-
-    flex-wrap: wrap;
-}
-
-#new-clothes .clothes .card .dress-img {
-    margin-bottom: 8px;
-}
-
-#new-clothes .clothes .card .card__heading {
-    font-size: 12px;
-    font-weight: 600;
-    color: #BDBDBD;
-    font-family: $font-secondary;
-    text-transform: uppercase;
-
-    margin: 0;
-}
-
-#new-clothes .clothes .card .card__description {
-    font-size: 18px;
-    font-weight: 300;
-    font-family: $font-secondary;
-    margin: 0;
-
-    margin-bottom: 18px;
-    padding: 0;
-}
-
-#new-clothes .clothes .card .card__price {
-    font-weight: bold;
-    font-family: $font-secondary;
-    font-size: 22px;
 }
 
 #new-clothes .options input[type="checkbox"] {

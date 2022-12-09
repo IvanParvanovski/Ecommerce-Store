@@ -1,0 +1,54 @@
+@import '../../../shared/variables';
+
+.banner {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.banner .border {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+
+    top: 8px;
+    right: -24px;
+
+    border-top: 2px solid $clr-black;
+    border-right: 2px solid $clr-black;
+}
+
+.banner .content {
+    width: 60%;
+    position: relative;
+
+    background: linear-gradient(90deg, #F6F8FC 0%, #F6F8FC 44.79%, #F5F7FA 74.48%, rgba(243, 239, 238, 0) 100%);
+}
+
+.banner .text {
+    width: 50%;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner .description {
+    font-family: $font-main;
+    color: $clr-gray1;
+
+    font-size: 1.45em;
+}
+
+.banner .text .heading {
+    font-size: 3rem;
+    font-family: $font-secondary;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.banner img {
+    position: relative;
+    width: 50%;
+}

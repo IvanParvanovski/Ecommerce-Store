@@ -1,0 +1,85 @@
+@import './variables';
+
+// #new-clothes .clothes {
+//     display: flex;
+//     gap: 24px;
+
+//     width: 100%;
+
+//     flex-wrap: wrap;
+// }
+
+// #new-clothes .clothes .card .dress-img {
+//     margin-bottom: 8px;
+// }
+
+// #new-clothes .clothes .card .card__heading {
+//     font-size: 12px;
+//     font-weight: 600;
+//     color: #BDBDBD;
+//     font-family: $font-secondary;
+//     text-transform: uppercase;
+
+//     margin: 0;
+// }
+
+// #new-clothes .clothes .card .card__description {
+//     font-size: 18px;
+//     font-weight: 300;
+//     font-family: $font-secondary;
+//     margin: 0;
+
+//     margin-bottom: 18px;
+//     padding: 0;
+// }
+
+// #new-clothes .clothes .card .card__price {
+//     font-weight: bold;
+//     font-family: $font-secondary;
+//     font-size: 22px;
+// }
+
+.clothes {
+    display: flex;
+    gap: 24px;
+
+    width: 100%;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.clothes .card {
+    position: relative;
+}
+
+.card .dress-img {
+    margin-bottom: 8px;
+}
+
+.card .card__heading {
+    font-size: 12px;
+    font-weight: 600;
+    color: #BDBDBD;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+.card .card__description {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: $font-secondary;
+    margin: 0;
+
+    margin-bottom: 18px;
+    padding: 0;
+}
+
+.card .card__price {
+    font-weight: bold;
+    font-family: $font-secondary;
+    font-size: 22px;
+}
