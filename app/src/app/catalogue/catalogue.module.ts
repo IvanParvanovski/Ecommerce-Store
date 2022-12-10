@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { CatalogueRoutingModule } from './catalogue-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -10,6 +11,7 @@ import { CatalogueRoutingModule } from './catalogue-routing.module';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     CatalogueRoutingModule,
   ],
   exports: [
