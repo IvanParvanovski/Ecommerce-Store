@@ -15,7 +15,16 @@ export class AuthService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) { 
+    this.getProfile().subscribe({
+      next: (user) => {
+        this.user = user;
+      },
+      error: (err) => {
+        this.user = null;
+      }
+    });
+  }
 
   registerUser(username: string, email:string, password: string, rePassword: string) {
     const tel = '';

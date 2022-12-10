@@ -1,0 +1,31 @@
+<div *ngIf="user">
+    <h1 class="pageTitle">Profile</h1>
+
+    <div class="container">
+        <div class="personalInfo">
+
+            <div>
+                <h2 class="personalInfo__title">Email</h2>
+                <h3 class="personalInfo__data">{{ user.email }}</h3>
+            </div>
+
+            <div class="names">
+                <div class="names__first">
+                    <h2 class="personalInfo__title">First Name</h2>
+                    <h3 class="personalInfo__data">{{ firstName }}</h3>
+                </div>
+
+                <div class="names__last">
+                    <h2 class="personalInfo__title">LastName</h2>
+                    <h3 class="personalInfo__data">{{ lastName }}</h3>
+                </div>
+
+                <div class="names__username">
+                    <h2 class="personalInfo__title">Username</h2>
+                    <h3 class="personalInfo__data">{{ user.username }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -9,6 +9,7 @@ import { AuthModule } from './auth/auth.module';
 import { CatalogueRoutingModule } from './catalogue/catalogue-routing.module';
 import { CatalogueModule } from './catalogue/catalogue.module';
 import { CoreModule } from './core/core.module';
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CoreModule } from './core/core.module';
     CatalogueRoutingModule,
     CoreModule,
     AuthModule,
-    CatalogueModule
+    CatalogueModule,
+    ProfileModule
   ],
   providers: [
     appInterceptorProvider

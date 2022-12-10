@@ -1,0 +1,54 @@
+@import '../../shared/variables';
+.container {
+    border: 2px solid $clr-black;
+}
+
+.pageTitle {
+    font-family: $font-secondary;
+    font-size: 54px;
+    margin-left: 16px;
+}
+
+.personalInfo {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.names {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.names__first, .names__last {
+    width: 48.5%;
+}
+
+.names__username {
+    width: 100%;
+}
+
+.personalInfo__title {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    text-align: left;
+
+    font-size: 32px;
+}
+
+.personalInfo__data {
+    font-family: $font-main;
+    background-color: $clr-white;
+
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 24px;
+
+    color: $clr-black2;
+    border: 3px solid $clr-divider;
+}

@@ -7,7 +7,8 @@ const apiUrl = environment.apiURL;
 
 @Injectable()
 export class AppInterceptor implements HttpInterceptor {
-    constructor() {}
+    constructor() { }
+    
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         if (req.url.startsWith('/api')) {
             req = req.clone({ url: req.url.replace('/api', apiUrl), withCredentials: true });
