@@ -6,6 +6,8 @@ to authenticate and do plenty of actions like adding products,
 increse or decrease their quantity and get useful information 
 about their purchases and profile.
 
+# Structure
+
 * /src/assets
 
 Contains all the images and static files needed for the app to run properly.
@@ -34,14 +36,16 @@ It provides details about the user account
 
 This is a module which takes care of the purchases and desired products
 
-# Register User
+# Endpoints
+
+* Register User
 
 https://localhost:3000/api/register
 
-# Login User
+* Login User
 
 https://localhost:3000/api/login
 
-# Get User
+* Get User
 
 http://localhost:3000/api/users/profile
