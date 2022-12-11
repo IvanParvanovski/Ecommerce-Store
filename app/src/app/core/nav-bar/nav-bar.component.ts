@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
+import { PurchaseService } from 'src/app/purchase/purchase.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -17,8 +18,13 @@ export class NavBarComponent implements OnInit {
     return this.authService.user;
   }
 
+  get purchasesTotalSum() {
+    return this.purchaseService.total;
+  }
+
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private purchaseService: PurchaseService
   ) { }
 
   ngOnInit(): void {

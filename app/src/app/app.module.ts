@@ -10,6 +10,7 @@ import { CatalogueRoutingModule } from './catalogue/catalogue-routing.module';
 import { CatalogueModule } from './catalogue/catalogue.module';
 import { CoreModule } from './core/core.module';
 import { ProfileModule } from './profile/profile.module';
+import { PurchaseModule } from './purchase/purchase.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileModule } from './profile/profile.module';
     CoreModule,
     AuthModule,
     CatalogueModule,
-    ProfileModule
+    ProfileModule,
+    PurchaseModule
   ],
   providers: [
     appInterceptorProvider

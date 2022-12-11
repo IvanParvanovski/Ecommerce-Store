@@ -1,0 +1,116 @@
+@import '../../../shared/variables';
+
+.cart__info {
+    width: 25%;
+    font-family: $font-secondary;
+}
+
+.cart__info .discount,
+.cart__info .purchase-info {
+    background-color: $clr-lightBlueHover;
+    border: 2px solid $clr-divider;
+    width: 100%;
+    padding: 16px 32px;
+} 
+
+.cart__info .discount {
+    margin-bottom: 32px;
+}
+
+.cart__info .discount__heading {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.discount__field {
+    position: relative;
+}
+
+.discount__field__input {
+    width: 89%;
+    padding: 14px 28px;
+}
+
+.discount__field__text {
+    top: -5px;
+    text-transform: uppercase;
+    right: 18px;
+    position: absolute;
+    font-weight: 600;
+}
+
+.discount__taxes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount__taxes__heading {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.discount__taxes .discount__taxes__option {
+    background-color: transparent;
+    border: none;
+    width: 68px;
+    height: 68px;
+    font-size: 26px;
+    color: $clr-gray1;
+
+    margin: auto 0;
+}
+
+.purchase-info {
+    position: relative;
+}
+
+.purchase-info .cost__details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cost__details__subtotal,
+.cost__details__subtotal-value,
+.cost__details__tax,
+.cost__details__tax-value {
+    font-size: 18px;
+    margin: 0;
+
+    margin-top: 8px;
+}
+
+.cost__details__tax,
+.cost__details__tax-value {
+    color: $clr-gray1;
+}
+
+.cost__details__total,
+.cost__details__total-value {
+    font-size: 24px;
+}
+
+.divider {
+    background-color: $clr-divider;
+    width: 100%;
+    height: 2px;
+}
+
+.purchase-info__addresses {
+    text-align: center;
+    text-transform: uppercase;
+    color: $clr-gray1;
+    margin-bottom: 48px;
+}
+
+.purchase-info__control {
+    position: absolute;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: $clr-black;
+    color: $clr-white;
+    bottom: 0;
+    left: 0;
+    padding: 12px 16px;
+}

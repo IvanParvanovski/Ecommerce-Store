@@ -22,6 +22,6 @@
         <p class="card__description">{{product.description}}</p>
         
         <span class="card__price">{{product.price | priceFormat}} EUR</span>
-        <button class="buyButton">Buy</button>
+        <button class="buyButton" (click)="addToBag(product)">Buy</button>
     </div>
 </section>

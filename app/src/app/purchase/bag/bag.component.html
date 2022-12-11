@@ -1,0 +1,90 @@
+<ng-container *ngIf="isEmpty">
+    <div class="emptyBag">
+        <h1 class="emptyBag__title">Empty Bag!</h1>
+        <h2 class="emptyBag__subtitle">Nothing is added.</h2>
+    </div>
+
+</ng-container>
+
+<ng-container *ngIf="!isEmpty">
+    <div class="cart">
+        <section class="cart__products">
+            <table class="products-table">
+
+                <thead class="products-table__head">
+                    <tr class="products-table__head__row">
+                        <th class="products-table__head__th">Product</th>
+                        <th class="products-table__head__th">Price</th>
+                        <th class="products-table__head__th">Quantity</th>
+                        <th class="products-table__head__th">Total</th>
+                        <th class="products-table__head__th"></th>
+                    </tr>
+                </thead>
+
+                <tbody class="products-table__body">
+                    <tr class="row-divider"><td></td></tr>
+
+                    <tr class="item-row" *ngFor="let item of items">
+                        <td>
+                            <img class="product-image" src="{{ item.img }}" alt="No Image">
+                            <span class="product-title">{{ item.description }}</span>
+                        </td>
+                        <td>
+                            <span class="price">{{ item.price | priceFormat }} EUR</span>
+                        </td>
+                        <td>
+                            <button (click)="increaseQuantity(item)" class="quantity plus">+</button>
+                            <button class="quantity value">{{ item.quantity }}</button>
+                            <button (click)="decreaseQuantity(item)" class="quantity minus">-</button>
+                        </td>
+                        <td>
+                            <span class="price">{{ item.price * item.quantity | priceFormat }} EUR</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="cart__info">
+            <div class="discount">
+                <h4 class="discount__heading">Apply Discount Code</h4>
+                
+                <div class="discount__field">
+                    <input class="discount__field__input" type="text" placeholder="Enter discount code">
+                    <p class="discount__field__text">Apply Discount</p>
+                </div>
+
+                <div class="discount__taxes">
+                    <h5 class="discount__taxes__heading">Estimate Shipping and Tax</h5>
+                    <button class="discount__taxes__option">+</button>
+                </div>
+            </div>
+
+            <div class="purchase-info">
+                <div class="cost">
+                    <div class="cost__details">
+                        <h5 class="cost__details__subtotal">Subtotal</h5>
+                        <h5 class="cost__details__subtotal-value">{{bagSubtotal | priceFormat}} EUR</h5>
+                    </div>
+                    <div class="cost__details">
+                        <h5 class="cost__details__tax">Tax</h5>
+                        <h5 class="cost__details__tax-value">{{bagTax | priceFormat}} EUR</h5>
+                    </div>
+                    <div class="cost__details">
+                        <h3 class="cost__details__total">Order Total</h3>
+                        <h3 class="cost__details__total-value">{{bagTotal | priceFormat}} EUR</h3>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                
+                <p class="purchase-info__addresses">Check out with multiple addresses</p>
+                
+                <button class="purchase-info__control">Proceed to checkout</button>
+            </div>
+
+        </section>
+    </div>    
+</ng-container>
+
+

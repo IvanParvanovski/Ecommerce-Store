@@ -34,14 +34,14 @@
                 </li>
 
                 <li class="user-options__item">
-                    <i routerLink="#" class="fa-solid fa-heart"></i>
+                    <i routerLink="/bag" class="fa-solid fa-heart"></i>
                 </li>
                 <li class="user-options__item">
-                    <a routerLink="#" id="bag">
+                    <a routerLink="/bag" id="bag">
                         <i class="icon fa-solid fa-bag-shopping"></i>
                         <div>
                             <p class="bag__text">Shopping Cart</p>
-                            <p class="bag__total">0,00 EUR</p>
+                            <p class="bag__total">{{ purchasesTotalSum | priceFormat}} EUR</p>
                         </div>
                     </a>
                 </li>
@@ -62,7 +62,7 @@
                         <i class="icon fa-solid fa-bag-shopping"></i>
                         <div>
                             <p class="bag__text">Shopping Cart</p>
-                            <p class="bag__total">0,00 EUR</p>
+                            <p class="bag__total">{{ purchasesTotalSum | priceFormat }} EUR</p>
                         </div>
                     </a>
                 </li>

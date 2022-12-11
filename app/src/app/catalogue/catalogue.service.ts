@@ -95,6 +95,6 @@ export class CatalogueService {
         description: string, 
         price: number): IProduct {
 
-        return { img, title, description, price};
+        return { img, title, description, price, quantity: 0};
     }
 }
