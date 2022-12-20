@@ -1,0 +1,85 @@
+@import '../../shared/variables';
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 30%;
+    height: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: $clr-black2;
+}
+
+.card .card__img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.card .content {
+    height: 28%;
+    padding: 14px 28px;
+    overflow: hidden;
+}
+
+.card__heading,
+.card__content {
+    font-family: $font-main;
+    color: $clr-white;
+}
+
+.card__heading {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: left;
+    margin: 0;
+}
+
+.card__content {
+    font-size: 18px;
+    letter-spacing: 2%;
+}
+
+.card__btn {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+
+    transform: translateX(-50%);
+
+    color: $clr-main2;
+    background-color: $clr-white;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+
+    font-size: 18px;
+    border: 1px solid $clr-main2;
+    padding: 6px 28px;
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+}
+
+.card__btn:hover {
+    background-color: $clr-main2;
+    color: $clr-black;
+    border: 1px solid $clr-black;
+
+    -webkit-transition: all 0.2s 0s ease-in-out;
+    -moz-transition: all 0.2s 0s ease-in-out;
+    -o-transition: all 0.2s 0s ease-in-out;
+    transition: all 0.2s 0s ease-in-out;
+
+    cursor: pointer;
+}

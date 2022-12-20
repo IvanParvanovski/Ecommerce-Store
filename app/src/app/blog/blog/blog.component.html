@@ -1,0 +1,14 @@
+<div class="cards">
+
+    <article class="card" *ngFor="let article of blogArticles">
+        <img class="card__img" src="{{ article.img }}" alt="No image">
+        
+        <div class="content">
+            <h1 class="card__heading">{{ article.title }}</h1>
+            <p class="card__content">{{ article.content }}</p>
+        </div>
+
+        <button class="card__btn" (click)="handleDetails(article.id)">Details</button>
+    </article>
+
+</div>

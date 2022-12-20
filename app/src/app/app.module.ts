@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { appInterceptorProvider } from './app.interceptor';
 import { AuthModule } from './auth/auth.module';
+import { BlogModule } from './blog/blog.module';
 import { CatalogueRoutingModule } from './catalogue/catalogue-routing.module';
 import { CatalogueModule } from './catalogue/catalogue.module';
 import { CoreModule } from './core/core.module';
@@ -24,7 +25,8 @@ import { PurchaseModule } from './purchase/purchase.module';
     AuthModule,
     CatalogueModule,
     ProfileModule,
-    PurchaseModule
+    PurchaseModule,
+    BlogModule
   ],
   providers: [
     appInterceptorProvider

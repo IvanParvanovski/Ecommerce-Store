@@ -20,78 +20,23 @@ export class CatalogueService {
     }
 
     addProducts(products: any) {
-        
         for (const key in products) {
             if (!!Number(key)) {
-                this.products?.push(products[key]);
+                const currentProduct = products[key];
+                currentProduct.quantity = 0;
+                this.products?.push(currentProduct);
             }
         }
-
-        // this.products?.push(this.createProduct(
-        //     '/assets/images/clothes/dress3.png', 
-        //     'Top Women',
-        //     'Angels malu zip jeans slim black used',
-        //     139
-        // ));
-
-        // this.products?.push(this.createProduct(
-        //     '/assets/images/clothes/dress4.png', 
-        //     'Top Women',
-        //     'Angels malu zip jeans slim black used',
-        //     139
-        // ));
-
-        // this.products?.push(this.createProduct(
-        //     '/assets/images/clothes/dress5.png', 
-        //     'Top Women',
-        //     'Angels malu zip jeans slim black used',
-        //     139
-        // ));
-
-        // this.products?.push(this.createProduct(
-        //     '/assets/images/clothes/dress6.png', 
-        //     'Top Women',
-        //     'Angels malu zip jeans slim black used',
-        //     139
-        // ));
-
-        // this.products?.push(this.createProduct(
-        //     '/assets/images/clothes/dress7.png', 
-        //     'Top Women',
-        //     'Angels malu zip jeans slim black used',
-        //     139
-        // ));
-
-        // this.products?.push(this.createProduct(
-        //     '/assets/images/clothes/dress8.png', 
-        //     'Top Women',
-        //     'Angels malu zip jeans slim black used',
-        //     139
-        // ));
-
-        // this.products?.push(this.createProduct(
-        //     '/assets/images/clothes/dress5.png', 
-        //     'Top Women',
-        //     'Angels malu zip jeans slim black used',
-        //     139
-        // ));
-
-        // this.products?.push(this.createProduct(
-        //     '/assets/images/clothes/dress2.png', 
-        //     'Top Women',
-        //     'Angels malu zip jeans slim black used',
-        //     139
-        // ));
     }
 
-    createProduct(
-        img: string,
-        title: string,
-        description: string,
-        price: number): IProduct {
+    // createProduct(
+    //     img: string,
+    //     title: string,
+    //     description: string,
+    //     price: number): IProduct {
 
-        return { img, title, description, price, quantity: 0 };
-    }
+    //     return { img, title, description, price, quantity: 0 };
+    // }
 
     getProducts() {
         return this.http.get<any>(
