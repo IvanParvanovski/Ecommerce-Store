@@ -20,11 +20,11 @@ export class RegisterComponent implements OnInit {
     pass: this.fb.group({
       password: ['', [Validators.required, Validators.minLength(7)]],
       rePassword: ['']
-    }, { validators: [ matchingPasswords('password', 'rePassword') ]})
+    }, { validators: [matchingPasswords('password', 'rePassword')] })
   });
 
   constructor(
-    private fb: FormBuilder, 
+    private fb: FormBuilder,
     private authService: AuthService,
     private router: Router
   ) { }
@@ -41,15 +41,20 @@ export class RegisterComponent implements OnInit {
     const rePassword = this.registerForm.value.pass?.rePassword;
 
     this.authService.registerUser(
-      username!, 
-      email!, 
-      password!, 
-      rePassword!).subscribe( user => {
-        this.authService.user = user;
-        this.router.navigate(['/']);
-    });
-    
-    // Error page
-    this.router.navigate(['/login']);    
+      username!,
+      email!,
+      password!,
+      rePassword!).subscribe({
+        next: (user) => {
+          this.authService.user = user;
+          this.router.navigate(['/']);
+        },
+        error: (response) => {
+          if (response.status == 409) {
+            this.authService.userExists = true;
+            this.router.navigate(['/login']);
+          }
+        }
+      });
   }
 }

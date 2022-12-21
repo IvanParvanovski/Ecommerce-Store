@@ -1,0 +1,32 @@
+@import '../../shared/variables';
+
+.error {
+    position: relative;
+    background-color: rgba(251, 4, 4, 0.66);
+    width: 200px;
+    width: fit-content;
+
+    padding: 8px 24px;
+    padding-left: 50px;
+    
+    border: 2px solid $clr-divider;
+    border-radius: 4px;
+}
+
+.error .error__icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    color: $clr-white;
+    font-size: 18px;
+    transform: translateY(-50%);
+}
+
+.error .error__msg {
+    vertical-align: middle;
+    font-family: $font-main;
+    font-size: 17px;
+    color: $clr-white;
+
+}
+

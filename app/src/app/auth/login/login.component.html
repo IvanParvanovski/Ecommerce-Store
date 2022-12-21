@@ -36,6 +36,22 @@
             <!-- {{passwordInput?.errors | json}} -->
         </div>
 
+        <ng-container *ngIf="errorMsg || hasUser">
+            <ng-container *ngIf="errorMsg">
+                <div class="error">
+                    <i class="error__icon fa-solid fa-circle-exclamation"></i>
+                    <p class="error__msg">{{errorMsg}}</p>
+                </div>
+            </ng-container>     
+
+            <ng-container *ngIf="hasUser">
+                <div class="error">
+                    <i class="error__icon fa-solid fa-circle-exclamation"></i>
+                    <p class="error__msg">User with this email already exists, please log in!</p>
+                </div>
+            </ng-container>
+        </ng-container>
+
         <div class="controls">
             <button id="submitBtn" type="submit">Sign In</button>
             <button id="backBtn" type="button">Back</button>

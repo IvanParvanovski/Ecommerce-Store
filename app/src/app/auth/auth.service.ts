@@ -8,6 +8,7 @@ import { IUser } from '../shared/interfaces/user';
 export class AuthService {
 
   user: IUser | null =  null;
+  userExists!: boolean;
 
   get isLogged() {
     return this.user !== null;
