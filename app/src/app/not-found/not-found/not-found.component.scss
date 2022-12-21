@@ -1,0 +1,24 @@
+@import '../../shared/variables';
+
+.notFound {
+    text-align: center;
+    margin: auto;
+    padding-top: 6.9%;
+    padding-bottom: 6.9%;
+}
+
+.notFound__title,
+.notFound__subtitle {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+}
+
+.notFound__title {
+    font-size: 56px;
+}
+
+.notFound__subtitle {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    font-weight: 400;
+}

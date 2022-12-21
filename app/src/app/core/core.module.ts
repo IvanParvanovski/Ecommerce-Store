@@ -14,7 +14,7 @@ const routes: Routes = [
   declarations: [
     NavBarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,

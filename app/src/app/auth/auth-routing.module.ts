@@ -15,7 +15,7 @@ const routes: Routes = [
     {
         path: 'logout',
         component: LogoutComponent,
-    }
+    },
 ];
 
 export const AuthRoutingModule = RouterModule.forChild(routes);
