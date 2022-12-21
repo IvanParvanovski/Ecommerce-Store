@@ -36,6 +36,10 @@ It provides details about the user account
 
 This is a module which takes care of the purchases and desired products
 
+* src/app/blog
+
+A module which contains blog posts (articles)
+
 # Endpoints
 
 * Register User
@@ -49,3 +53,16 @@ https://localhost:3000/api/login
 * Get User
 
 http://localhost:3000/api/users/profile
+
+* Get Articles
+
+https://ecommerce-store-9b470-default-rtdb.firebaseio.com/articles.json
+
+* Get Article
+
+https://ecommerce-store-9b470-default-rtdb.firebaseio.com/articles/${id}.json
+
+* Get Products
+
+https://ecommerce-store-9b470-default-rtdb.firebaseio.com/products.json
+
