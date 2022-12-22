@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
 })
 export class BlogService {
   articles: IArticle[] | null = [];
-  article!: IArticle;
+  article!: IArticle | null;
 
   get blogArticles() {
       return this.articles;

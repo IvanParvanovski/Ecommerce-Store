@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from '../blog.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class DetailsComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private blogService: BlogService
+    private blogService: BlogService,
    ) { }
 
   ngOnInit(): void {
@@ -24,4 +24,7 @@ export class DetailsComponent implements OnInit {
     this.blogService.getArticle(this.articleId);
   }
 
+  ngOnDestroy(): void {
+    this.blogService.article = null;
+  }
 }
